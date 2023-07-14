@@ -13,7 +13,7 @@ public class CarroImplementacoes extends Dao implements CarroRepositorio {
 	@Override
 	public void criarCarro(Carro carro) throws Exception {
 		open();
-		stmt = con.prepareStatement("INSERT INTO CARRO VALUES(?,?,?,?,?,?,?,?");
+		stmt = con.prepareStatement("INSERT INTO CARRO VALUES(?,?,?,?,?,?,?,?)");
 		stmt.setInt(1, carro.getId());
 		stmt.setString(2, carro.getMarca());
 		stmt.setString(3, carro.getModelo());
