@@ -9,9 +9,9 @@ import java.sql.SQLException;
 import com.mysql.cj.jdbc.CallableStatement;
 
 public class Dao {
-	Connection con;
-	PreparedStatement stmt;
-	ResultSet rs;
+	protected Connection con;
+	protected PreparedStatement stmt;
+	protected ResultSet rs;
 	CallableStatement call;
 	
 	public void open() throws Exception {

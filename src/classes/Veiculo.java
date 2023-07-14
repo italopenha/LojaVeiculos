@@ -8,6 +8,10 @@ public abstract class Veiculo {
 	protected int ano;
 	protected float km;
 	
+	public Veiculo() {
+		
+	}
+	
 	public Veiculo(String marca, String modelo, String cor, int ano, float km) {
 		super();
 		this.marca = marca;
@@ -19,6 +23,10 @@ public abstract class Veiculo {
 
 	public int getId() {
 		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getMarca() {
