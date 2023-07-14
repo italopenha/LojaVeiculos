@@ -1,6 +1,7 @@
 package classes;
 
 public abstract class Veiculo {
+	protected int id;
 	protected String marca;
 	protected String modelo;
 	protected String cor;
