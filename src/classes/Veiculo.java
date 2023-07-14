@@ -17,6 +17,10 @@ public abstract class Veiculo {
 		this.km = km;
 	}
 
+	public int getId() {
+		return id;
+	}
+
 	public String getMarca() {
 		return marca;
 	}
