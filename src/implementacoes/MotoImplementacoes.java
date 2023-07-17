@@ -56,9 +56,9 @@ public class MotoImplementacoes extends Dao implements MotoRepositorio {
 	}
 
 	@Override
-	public boolean atualizarMoto(Moto moto) throws Exception {
+	public void atualizarMoto(Moto moto) throws Exception {
 		open();
-		stmt = con.prepareStatement("UPDATE MOTO SET MARCA = ?, MODELO = ?, COR = ?, ANO = ?, KM = ?, CILINDRADA = ?");
+		stmt = con.prepareStatement("UPDATE MOTO SET MARCA = ?, MODELO = ?, COR = ?, ANO = ?, KM = ?, CILINDRADA = ? WHERE ID = ?");
 		try {
 			stmt.setString(1, moto.getMarca());
 			stmt.setString(2, moto.getModelo());
@@ -66,15 +66,15 @@ public class MotoImplementacoes extends Dao implements MotoRepositorio {
 			stmt.setInt(4, moto.getAno());
 			stmt.setFloat(5, moto.getKm());
 			stmt.setInt(6, moto.getCilindrada());
+			stmt.setInt(7, moto.getId());
+			stmt.execute();
 		} catch (SQLException ex) {
 			System.out.println("Erro: " + ex.getMessage() + stmt);
 			stmt.close();
 			close();
-			return false;
 		}
 		stmt.close();
 		close();
-		return true;
 	}
 
 	@Override

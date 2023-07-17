@@ -52,7 +52,7 @@ public class CarroImplementacoes extends Dao implements CarroRepositorio {
 	}
 
 	@Override
-	public boolean atualizarCarro(Carro carro) throws Exception {
+	public void atualizarCarro(Carro carro) throws Exception {
 		open();
 		stmt = con.prepareStatement("UPDATE CARRO SET MARCA = ?, MODELO = ?, COR = ?, ANO = ?, KM = ?, CAMBIO = ?, CARROCERIA = ? WHERE ID = ?");
 		try {
@@ -63,15 +63,15 @@ public class CarroImplementacoes extends Dao implements CarroRepositorio {
 			stmt.setFloat(5, carro.getKm());
 			stmt.setString(6, carro.getCambio());
 			stmt.setString(7, carro.getCarroceria());
+			stmt.setInt(8, carro.getId());
+			stmt.execute();
 		} catch (SQLException ex) {
 			System.out.println("Erro: " + ex.getMessage() + stmt);
 			stmt.close();
 			close();
-			return false;
 		}
 		stmt.close();
 		close();
-		return true;
 	}
 
 	@Override
