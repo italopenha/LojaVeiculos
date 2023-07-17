@@ -108,6 +108,17 @@ public class MotoImplementacoes extends Dao implements MotoRepositorio {
 				listaMotos.add(moto);
 			}
 			
+			for (int i = 0; i < listaMotos.size(); i++) {
+				System.out.println("ID: " + listaMotos.get(i).getId());
+				System.out.println("Marca: " + listaMotos.get(i).getMarca());
+				System.out.println("Modelo: " + listaMotos.get(i).getModelo());
+				System.out.println("Cor: " + listaMotos.get(i).getCor());
+				System.out.println("Ano: " + listaMotos.get(i).getAno());
+				System.out.println("Km: " + listaMotos.get(i).getKm());
+				System.out.println("Cilindrada: " + listaMotos.get(i).getCilindrada());
+				System.out.println("----------------------------");
+			}
+			
 			close();
 			return listaMotos;
 		} catch (Exception e) {

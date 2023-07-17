@@ -106,6 +106,18 @@ public class CarroImplementacoes extends Dao implements CarroRepositorio {
 				listaCarros.add(carro);
 			}
 			
+			for (int i = 0; i < listaCarros.size(); i++) {
+				System.out.println("ID: " + listaCarros.get(i).getId());
+				System.out.println("Marca: " + listaCarros.get(i).getMarca());
+				System.out.println("Modelo: " + listaCarros.get(i).getModelo());
+				System.out.println("Cor: " + listaCarros.get(i).getCor());
+				System.out.println("Ano: " + listaCarros.get(i).getAno());
+				System.out.println("Km: " + listaCarros.get(i).getKm());
+				System.out.println("Câmbio: " + listaCarros.get(i).getCambio());
+				System.out.println("Carroceria: " + listaCarros.get(i).getCarroceria());
+				System.out.println("----------------------------");
+			}
+			
 			close();
 			return listaCarros;
 		} catch (Exception e) {
