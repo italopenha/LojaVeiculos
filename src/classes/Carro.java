@@ -1,5 +1,7 @@
 package classes;
 
+import implementacoes.CarroImplementacoes;
+
 public class Carro extends Veiculo {
 	private String cambio;
 	private String carroceria;
@@ -32,6 +34,14 @@ public class Carro extends Veiculo {
 
 	@Override
 	public void venderVeiculo() {
-		// TODO Auto-generated method stub
+		CarroImplementacoes ci = new CarroImplementacoes();
+		Carro c = new Carro();
+		
+		try {
+			ci.excluirCarroPorId(c);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
