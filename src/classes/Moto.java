@@ -1,5 +1,7 @@
 package classes;
 
+import implementacoes.MotoImplementacoes;
+
 public class Moto extends Veiculo {
 	private int cilindrada;
 	
@@ -22,6 +24,13 @@ public class Moto extends Veiculo {
 
 	@Override
 	public void venderVeiculo() {
-		// TODO Auto-generated method stub
+		MotoImplementacoes mi = new MotoImplementacoes();
+		Moto m = new Moto();
+		
+		try {
+			mi.excluirMotoPorId(m);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
