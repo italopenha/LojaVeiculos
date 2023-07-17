@@ -71,10 +71,10 @@ public class MotoImplementacoes extends Dao implements MotoRepositorio {
 	}
 
 	@Override
-	public void excluirMotoPorId(Moto moto) throws Exception {
+	public void excluirMotoPorId(int id) throws Exception {
 		open();
 		stmt = con.prepareStatement("DELETE FROM MOTO WHERE ID = ?");
-		stmt.setInt(1, moto.getId());
+		stmt.setInt(1, id);
 		stmt.execute();
 		stmt.close();
 		close();
