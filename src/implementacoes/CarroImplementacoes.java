@@ -75,10 +75,10 @@ public class CarroImplementacoes extends Dao implements CarroRepositorio {
 	}
 
 	@Override
-	public void excluirCarroPorId(Carro carro) throws Exception {
+	public void excluirCarroPorId(int id) throws Exception {
 		open();
 		stmt = con.prepareStatement("DELETE FROM CARRO WHERE ID = ?");
-		stmt.setInt(1, carro.getId());
+		stmt.setInt(1, id);
 		stmt.execute();
 		stmt.close();
 		close();
