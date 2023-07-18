@@ -50,7 +50,5 @@ public class Carro extends Veiculo {
 		} catch (Exception e) {
 			System.out.println("Erro: " + e.getMessage());
 		}
-		
-		leitor.close();
 	}
 }
