@@ -18,7 +18,7 @@ public class MotoImplementacoes extends Dao implements MotoRepositorio {
 		stmt.setString(3, moto.getModelo());
 		stmt.setString(4, moto.getCor());
 		stmt.setInt(5, moto.getAno());
-		stmt.setFloat(6, moto.getKm());
+		stmt.setInt(6, moto.getKm());
 		stmt.setInt(7, moto.getCilindrada());
 		stmt.execute();
 		stmt.close();
@@ -39,7 +39,7 @@ public class MotoImplementacoes extends Dao implements MotoRepositorio {
 			moto.setModelo(rs.getString("modelo"));
 			moto.setCor(rs.getString("cor"));
 			moto.setAno(rs.getInt("ano"));
-			moto.setKm(rs.getFloat("km"));
+			moto.setKm(rs.getInt("km"));
 			moto.setCilindrada(rs.getInt("cilindrada"));
 			System.out.println("ID: " + moto.getId());
 			System.out.println("Marca: " + moto.getMarca());
@@ -64,7 +64,7 @@ public class MotoImplementacoes extends Dao implements MotoRepositorio {
 			stmt.setString(2, moto.getModelo());
 			stmt.setString(3, moto.getCor());
 			stmt.setInt(4, moto.getAno());
-			stmt.setFloat(5, moto.getKm());
+			stmt.setInt(5, moto.getKm());
 			stmt.setInt(6, moto.getCilindrada());
 			stmt.setInt(7, moto.getId());
 			stmt.execute();
@@ -103,7 +103,7 @@ public class MotoImplementacoes extends Dao implements MotoRepositorio {
 				moto.setModelo(rs.getString("modelo"));
 				moto.setCor(rs.getString("cor"));
 				moto.setAno(rs.getInt("ano"));
-				moto.setKm(rs.getFloat("km"));
+				moto.setKm(rs.getInt("km"));
 				moto.setCilindrada(rs.getInt("cilindrada"));
 				listaMotos.add(moto);
 			}

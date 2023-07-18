@@ -6,13 +6,13 @@ public abstract class Veiculo {
 	protected String modelo;
 	protected String cor;
 	protected int ano;
-	protected float km;
+	protected int km;
 	
 	public Veiculo() {
 		
 	}
 	
-	public Veiculo(String marca, String modelo, String cor, int ano, float km) {
+	public Veiculo(String marca, String modelo, String cor, int ano, int km) {
 		super();
 		this.marca = marca;
 		this.modelo = modelo;
@@ -61,11 +61,11 @@ public abstract class Veiculo {
 		this.ano = ano;
 	}
 
-	public float getKm() {
+	public int getKm() {
 		return km;
 	}
 
-	public void setKm(float km) {
+	public void setKm(int km) {
 		this.km = km;
 	}
 

@@ -7,7 +7,7 @@ import implementacoes.MotoImplementacoes;
 public class Moto extends Veiculo {
 	private int cilindrada;
 	
-	public Moto(String marca, String modelo, String cor, int ano, float km, int cilindrada) {
+	public Moto(String marca, String modelo, String cor, int ano, int km, int cilindrada) {
 		super(marca, modelo, cor, ano, km);
 		this.cilindrada = cilindrada;
 	}

@@ -19,7 +19,7 @@ public class CarroImplementacoes extends Dao implements CarroRepositorio {
 		stmt.setString(3, carro.getModelo());
 		stmt.setString(4, carro.getCor());
 		stmt.setInt(5, carro.getAno());
-		stmt.setFloat(6, carro.getKm());
+		stmt.setInt(6, carro.getKm());
 		stmt.setString(7, carro.getCambio());
 		stmt.setString(8, carro.getCarroceria());
 		stmt.execute();
@@ -41,7 +41,7 @@ public class CarroImplementacoes extends Dao implements CarroRepositorio {
 			carro.setModelo(rs.getString("modelo"));
 			carro.setCor(rs.getString("cor"));
 			carro.setAno(rs.getInt("ano"));
-			carro.setKm(rs.getFloat("km"));
+			carro.setKm(rs.getInt("km"));
 			carro.setCambio(rs.getString("cambio"));
 			carro.setCarroceria(rs.getString("carroceria"));
 		} else {
@@ -60,7 +60,7 @@ public class CarroImplementacoes extends Dao implements CarroRepositorio {
 			stmt.setString(2, carro.getModelo());
 			stmt.setString(3, carro.getCor());
 			stmt.setInt(4, carro.getAno());
-			stmt.setFloat(5, carro.getKm());
+			stmt.setInt(5, carro.getKm());
 			stmt.setString(6, carro.getCambio());
 			stmt.setString(7, carro.getCarroceria());
 			stmt.setInt(8, carro.getId());
@@ -100,7 +100,7 @@ public class CarroImplementacoes extends Dao implements CarroRepositorio {
 				carro.setModelo(rs.getString("modelo"));
 				carro.setCor(rs.getString("cor"));
 				carro.setAno(rs.getInt("ano"));
-				carro.setKm(rs.getFloat("km"));
+				carro.setKm(rs.getInt("km"));
 				carro.setCambio(rs.getString("cambio"));
 				carro.setCarroceria(rs.getString("carroceria"));
 				listaCarros.add(carro);

@@ -12,7 +12,7 @@ public class Carro extends Veiculo {
 		
 	}
 	
-	public Carro(String marca, String modelo, String cor, int ano, float km, String cambio, String carroceria) {
+	public Carro(String marca, String modelo, String cor, int ano, int km, String cambio, String carroceria) {
 		super(marca, modelo, cor, ano, km);
 		this.cambio = cambio;
 		this.carroceria = carroceria;
