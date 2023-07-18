@@ -1,5 +1,7 @@
 package classes;
 
+import java.util.Scanner;
+
 import implementacoes.MotoImplementacoes;
 
 public class Moto extends Veiculo {
@@ -26,11 +28,19 @@ public class Moto extends Veiculo {
 	public void venderVeiculo() {
 		MotoImplementacoes mi = new MotoImplementacoes();
 		Moto m = new Moto();
+		Scanner leitor = new Scanner(System.in);
+		int id;
 		
 		try {
-			mi.excluirMotoPorId(m);
+			System.out.println("--- Vender Moto ---");
+			System.out.println("Digite o ID da moto que foi vendida: ");
+			m.setId(id = leitor.nextInt());
+			mi.excluirMotoPorId(id);
+			System.out.println("Moto excluída do sistema com sucesso!");
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("Erro: " + e.getMessage());
 		}
+		
+		leitor.close();
 	}
 }

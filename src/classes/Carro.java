@@ -1,5 +1,7 @@
 package classes;
 
+import java.util.Scanner;
+
 import implementacoes.CarroImplementacoes;
 
 public class Carro extends Veiculo {
@@ -36,12 +38,19 @@ public class Carro extends Veiculo {
 	public void venderVeiculo() {
 		CarroImplementacoes ci = new CarroImplementacoes();
 		Carro c = new Carro();
+		Scanner leitor = new Scanner(System.in);
+		int id;
 		
 		try {
-			ci.excluirCarroPorId(c);
+			System.out.println("--- Vender Carro ---");
+			System.out.println("Digite o ID do carro que foi vendido: ");
+			c.setId(id = leitor.nextInt());
+			ci.excluirCarroPorId(id);
+			System.out.println("Carro excluído do sistema com sucesso!");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Erro: " + e.getMessage());
 		}
+		
+		leitor.close();
 	}
 }
