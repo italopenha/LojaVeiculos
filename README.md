@@ -1,6 +1,6 @@
 <h1>LojaVeiculos</h1>
 
-<h2>Aplicação console escrita em Java que simula uma loja de veículos.</h2>
+<h2>Aplicação console escrita em Java que simula um estoque de uma loja de veículos.</h2>
 
 :heavy_minus_sign: Construída com o intuito de colocar em prática os pilares da POO, persistindo os dados em um banco de dados MySQL.
 
