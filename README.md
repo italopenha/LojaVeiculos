@@ -20,4 +20,4 @@
 
 <h2>Aplicação em funcionamento:</h2>
 
-<a href="https://youtu.be/iLs8TlY0crU">Clique aqui para ver a aplicação em funcionamento!</a>
+<a href="https://youtu.be/iLs8TlY0crU" target="_blank">Clique aqui para ver a aplicação em funcionamento!</a>
